@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className="flex-1 min-h-screen">
             {/* 3D Hero Section - Responsive Heights */}
-            <div className="relative w-full h-[280px] xs:h-[320px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-gradient-to-br from-[#060e1f] via-[#0b1e40] to-[#101622]">
+            <div className="relative w-full h-70 xs:h-80 sm:h-100 md:h-125 lg:h-150 overflow-hidden bg-gradient-to-br from-[#060e1f] via-[#0b1e40] to-[#101622]">
                 <Suspense fallback={<div className="w-full h-full flex items-center justify-center text-white/40 text-xs sm:text-sm">Loading 3D Scene...</div>}>
                     <Hero3D />
                 </Suspense>

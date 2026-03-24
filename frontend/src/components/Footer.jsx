@@ -9,29 +9,29 @@ export default function Footer() {
                 <div className="flex flex-col gap-3 sm:gap-4">
                     {/* Phone Support */}
                     <div className="flex items-start sm:items-center gap-2 sm:gap-3">
-                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary shadow-sm shrink-0">
                             <span className="material-symbols-outlined text-[18px] sm:text-[20px]">call</span>
                         </div>
                         <div className="min-w-0">
                             <p className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 dark:text-slate-400">Phone Support (24/7)</p>
-                            <a href="tel:+18005550199" className="text-xs sm:text-sm font-black text-slate-900 dark:text-white break-words">+1 (800) 555-0199</a>
+                            <a href="tel:+18005550199" className="text-xs sm:text-sm font-black text-slate-900 dark:text-white break-all">+1 (800) 555-0199</a>
                         </div>
                     </div>
 
                     {/* Email Support */}
                     <div className="flex items-start sm:items-center gap-2 sm:gap-3">
-                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary shadow-sm shrink-0">
                             <span className="material-symbols-outlined text-[18px] sm:text-[20px]">mail</span>
                         </div>
                         <div className="min-w-0">
                             <p className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 dark:text-slate-400">General Inquiries</p>
-                            <a href="mailto:support@lawconnect.com" className="text-xs sm:text-sm font-black text-slate-900 dark:text-white break-words">support@lawconnect.com</a>
+                            <a href="mailto:support@lawconnect.com" className="text-xs sm:text-sm font-black text-slate-900 dark:text-white break-all">support@lawconnect.com</a>
                         </div>
                     </div>
 
                     {/* Location */}
                     <div className="flex items-start sm:items-center gap-2 sm:gap-3">
-                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary shadow-sm shrink-0">
                             <span className="material-symbols-outlined text-[18px] sm:text-[20px]">location_on</span>
                         </div>
                         <div className="min-w-0">

@@ -19,22 +19,16 @@
     padding-top: env(safe-area-inset-top);
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
+    font-size: 14px;
   }
 
-  /* Responsive font sizes */
-  @screen xs {
-    body {
-      font-size: 14px;
-    }
-  }
-
-  @screen sm {
+  @media (min-width: 640px) {
     body {
       font-size: 15px;
     }
   }
 
-  @screen md {
+  @media (min-width: 768px) {
     body {
       font-size: 16px;
     }
@@ -43,25 +37,28 @@
   /* Better touch targets for mobile */
   button, a, input, select, textarea {
     min-height: 48px; /* iOS touch recommendation */
-    @screen md {
+  }
+
+  @media (min-width: 768px) {
+    button, a, input, select, textarea {
       min-height: auto;
     }
   }
 
   /* Input field focus states */
   input, textarea, select {
-    &:focus {
-      outline: none;
-      @apply ring-2 ring-blue-500 ring-offset-0;
-    }
+    outline: none;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(59, 130, 246);
   }
 
   /* Remove default styles on interactive elements */
   button {
-    &:active {
-      -webkit-user-select: none;
-      user-select: none;
-    }
+    -webkit-user-select: none;
+    user-select: none;
   }
 }
 
@@ -92,28 +89,124 @@
 
   /* Responsive text utilities */
   .text-responsive {
-    @apply text-xs sm:text-sm md:text-base lg:text-lg;
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .text-responsive {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-responsive {
+      font-size: 1.125rem;
+    }
   }
 
   .text-responsive-lg {
-    @apply text-sm sm:text-base md:text-lg lg:text-xl;
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive-lg {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .text-responsive-lg {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-responsive-lg {
+      font-size: 1.25rem;
+    }
   }
 
   .text-responsive-xl {
-    @apply text-base sm:text-lg md:text-xl lg:text-2xl;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive-xl {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .text-responsive-xl {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-responsive-xl {
+      font-size: 1.5rem;
+    }
   }
 
   /* Responsive padding utilities */
   .p-responsive {
-    @apply p-3 sm:p-4 md:p-6;
+    padding: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .p-responsive {
+      padding: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .p-responsive {
+      padding: 1.5rem;
+    }
   }
 
   .px-responsive {
-    @apply px-3 sm:px-4 md:px-8;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .px-responsive {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .px-responsive {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   .py-responsive {
-    @apply py-4 sm:py-6 md:py-8;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .py-responsive {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .py-responsive {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
   }
 
   /* Mobile optimization utilities */
@@ -128,16 +221,54 @@
 
   /* Flex responsive utilities */
   .flex-responsive {
-    @apply flex flex-col sm:flex-row;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 640px) {
+    .flex-responsive {
+      flex-direction: row;
+    }
   }
 
   .gap-responsive {
-    @apply gap-2 sm:gap-3 md:gap-4;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .gap-responsive {
+      gap: 0.75rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .gap-responsive {
+      gap: 1rem;
+    }
   }
 
   /* Grid responsive utilities */
   .grid-responsive {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  @media (min-width: 640px) {
+    .grid-responsive {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 768px) {
+    .grid-responsive {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-responsive {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
   /* Prevent iPhone zoom on input focus */
@@ -148,7 +279,15 @@
   textarea,
   select {
     font-size: 16px;
-    @screen md {
+  }
+
+  @media (min-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    select {
       font-size: 14px;
     }
   }

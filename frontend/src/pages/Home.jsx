@@ -38,7 +38,7 @@ const Home = () => {
                 <div className="bg-white dark:bg-[#1a2232] rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl p-2 xs:p-2.5 sm:p-3 border border-slate-200 dark:border-slate-700 transition-all hover:shadow-primary/5">
                     <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 md:gap-4 px-3 xs:px-4 sm:px-4">
                         <div className="flex items-center gap-2 xs:gap-3 flex-1 h-12 xs:h-13 sm:h-14 w-full">
-                            <span className="material-symbols-outlined text-slate-400 text-xl sm:text-2xl flex-shrink-0">search</span>
+                            <span className="material-symbols-outlined text-slate-400 text-xl sm:text-2xl shrink-0">search</span>
                             <input className="w-full bg-transparent border-none text-slate-900 dark:text-white placeholder-slate-400 focus:ring-0 text-xs xs:text-sm sm:text-base" placeholder="Search case type or location" type="text" />
                         </div>
                         <div className="h-6 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
@@ -110,14 +110,14 @@ const Home = () => {
                             { name: 'Elena Rodriguez', area: 'Corporate Law', exp: '10 Yrs', rating: 5.0, reviews: 56, img: 'ER' },
                         ].map((lawyer, idx) => (
                             <div key={idx} onClick={() => navigate('/auth')} className="group flex gap-3 xs:gap-4 sm:gap-5 p-4 xs:p-5 sm:p-6 bg-white dark:bg-[#1a2232] rounded-lg xs:rounded-xl sm:rounded-2xl md:rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800 cursor-pointer hover:shadow-2xl hover:-translate-y-1 transition-all">
-                                <div className="w-16 xs:w-18 sm:w-20 h-16 xs:h-18 sm:h-20 rounded-lg xs:rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-400 to-blue-700 flex-shrink-0 flex items-center justify-center text-white font-black text-lg xs:text-xl sm:text-2xl shadow-xl group-hover:scale-105 transition-transform">
+                                <div className="w-16 xs:w-18 sm:w-20 h-16 xs:h-18 sm:h-20 rounded-lg xs:rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-400 to-blue-700 shrink-0 flex items-center justify-center text-white font-black text-lg xs:text-xl sm:text-2xl shadow-xl group-hover:scale-105 transition-transform">
                                     {lawyer.img}
                                 </div>
                                 <div className="flex flex-col flex-1 justify-center min-w-0">
                                     <h4 className="text-base xs:text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors truncate">{lawyer.name}</h4>
                                     <p className="text-xs xs:text-sm text-slate-500 dark:text-slate-400 mb-2 truncate">{lawyer.area} • {lawyer.exp} Exp.</p>
                                     <div className="flex items-center gap-1 bg-slate-50 dark:bg-slate-800/50 w-fit px-2 xs:px-3 py-1 rounded-full border border-slate-100 dark:border-slate-700">
-                                        <span className="material-symbols-outlined text-yellow-500 text-[16px] xs:text-[18px] fill-current flex-shrink-0">star</span>
+                                        <span className="material-symbols-outlined text-yellow-500 text-[16px] xs:text-[18px] fill-current shrink-0">star</span>
                                         <span className="text-xs xs:text-sm font-bold text-slate-900 dark:text-white">{lawyer.rating}</span>
                                         <span className="text-[10px] xs:text-xs text-slate-400">({lawyer.reviews})</span>
                                     </div>

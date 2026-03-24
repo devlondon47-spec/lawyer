@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="sticky top-0 z-50 bg-white/80 dark:bg-[#111821]/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800">
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 h-14 sm:h-16 md:h-20 flex items-center justify-between">
                 {/* Logo - Responsive */}
-                <div className="flex items-center gap-1 sm:gap-2 cursor-pointer group flex-shrink-0" onClick={() => { navigate('/'); setMobileMenuOpen(false); }}>
+                <div className="flex items-center gap-1 sm:gap-2 cursor-pointer group shrink-0" onClick={() => { navigate('/'); setMobileMenuOpen(false); }}>
                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
                         <span className="material-symbols-outlined text-white text-lg sm:text-2xl">balance</span>
                     </div>

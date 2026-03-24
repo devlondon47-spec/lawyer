@@ -7,6 +7,14 @@ export default {
     darkMode: "class",
     theme: {
         extend: {
+            screens: {
+                'xs': '320px',   // Extra small - Mobile phones
+                'sm': '640px',   // Small - Tablets
+                'md': '768px',   // Medium - Tablets / Small laptops
+                'lg': '1024px',  // Large - Laptops
+                'xl': '1280px',  // Extra Large - Desktop
+                '2xl': '1536px', // 2XL - Large Desktop
+            },
             colors: {
                 "primary": "#196ee6",
                 "primary-dark": "#0d4ba0",
@@ -24,6 +32,10 @@ export default {
             fontFamily: {
                 "display": ["Public Sans", "sans-serif"]
             },
+            spacing: {
+                'safe-top': 'env(safe-area-inset-top)',
+                'safe-bottom': 'env(safe-area-inset-bottom)',
+            }
         },
     },
     plugins: [],
